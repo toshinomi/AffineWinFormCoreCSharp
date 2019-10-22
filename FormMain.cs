@@ -69,8 +69,6 @@ namespace AffineWinFormCoreCSharp
         {
             if (!string.IsNullOrWhiteSpace(m_strOpenFileName))
             {
-                pictureBox.Image = null;
-                m_strOpenFileName = string.Empty;
                 pictureBox.ImageLocation = m_strOpenFileName;
             }
         }
