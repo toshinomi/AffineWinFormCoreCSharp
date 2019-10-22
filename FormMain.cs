@@ -20,38 +20,8 @@ namespace AffineWinFormCoreCSharp
         {
             InitializeComponent();
 
-            groupBoxOperation.MouseDown += new MouseEventHandler(OnMouseDownFormMain);
-            groupBoxOperation.MouseMove += new MouseEventHandler(OnMouseMoveFormMain);
-            btnFileSelect.MouseDown += new MouseEventHandler(OnMouseDownFormMain);
-            btnFileSelect.MouseMove += new MouseEventHandler(OnMouseMoveFormMain);
-            btnClose.MouseDown += new MouseEventHandler(OnMouseDownFormMain);
-            btnClose.MouseMove += new MouseEventHandler(OnMouseMoveFormMain);
-
-            groupBoxImage.MouseDown += new MouseEventHandler(OnMouseDownFormMain);
-            groupBoxImage.MouseMove += new MouseEventHandler(OnMouseMoveFormMain);
-            pictureBox.MouseDown += new MouseEventHandler(OnMouseDownFormMain);
-            pictureBox.MouseMove += new MouseEventHandler(OnMouseMoveFormMain);
-
-            groupBoxTranslate.MouseDown += new MouseEventHandler(OnMouseDownFormMain);
-            groupBoxTranslate.MouseMove += new MouseEventHandler(OnMouseMoveFormMain);
-            textBoxTx.MouseDown += new MouseEventHandler(OnMouseDownFormMain);
-            textBoxTx.MouseMove += new MouseEventHandler(OnMouseMoveFormMain);
-            textBoxTy.MouseDown += new MouseEventHandler(OnMouseDownFormMain);
-            textBoxTy.MouseMove += new MouseEventHandler(OnMouseMoveFormMain);
-
-            groupBoxScale.MouseDown += new MouseEventHandler(OnMouseDownFormMain);
-            groupBoxScale.MouseMove += new MouseEventHandler(OnMouseMoveFormMain);
-            textBoxSx.MouseDown += new MouseEventHandler(OnMouseDownFormMain);
-            textBoxSx.MouseMove += new MouseEventHandler(OnMouseMoveFormMain);
-            textBoxSy.MouseDown += new MouseEventHandler(OnMouseDownFormMain);
-            textBoxSy.MouseMove += new MouseEventHandler(OnMouseMoveFormMain);
-
-            groupBoxRotate.MouseDown += new MouseEventHandler(OnMouseDownFormMain);
-            groupBoxRotate.MouseMove += new MouseEventHandler(OnMouseMoveFormMain);
-            textBoxRotate.MouseDown += new MouseEventHandler(OnMouseDownFormMain);
-            textBoxRotate.MouseMove += new MouseEventHandler(OnMouseMoveFormMain);
-            btnGo.MouseDown += new MouseEventHandler(OnMouseDownFormMain);
-            btnGo.MouseMove += new MouseEventHandler(OnMouseMoveFormMain);
+            lblTitle.MouseDown += new MouseEventHandler(OnMouseDownFormMain);
+            lblTitle.MouseMove += new MouseEventHandler(OnMouseMoveFormMain);
         }
 
         private void OnMouseDownFormMain(object sender, MouseEventArgs e)
@@ -178,6 +148,11 @@ namespace AffineWinFormCoreCSharp
             if (e.KeyChar == '.')
             {
                 TextBox textbox = (TextBox)sender;
+                if (textbox.TextLength <= 0)
+                {
+                    e.Handled = true;
+                    return;
+                }
                 if (CountChar(textbox.Text, '.') >= 1)
                 {
                     e.Handled = true;
@@ -197,6 +172,11 @@ namespace AffineWinFormCoreCSharp
             if (e.KeyChar == '.')
             {
                 TextBox textbox = (TextBox)sender;
+                if (textbox.TextLength <= 0)
+                {
+                    e.Handled = true;
+                    return;
+                }
                 if (CountChar(textbox.Text, '.') >= 1)
                 {
                     e.Handled = true;
