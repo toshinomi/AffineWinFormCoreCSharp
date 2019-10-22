@@ -63,7 +63,7 @@
             // btnFileSelect
             // 
             this.btnFileSelect.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnFileSelect.Location = new System.Drawing.Point(104, 133);
+            this.btnFileSelect.Location = new System.Drawing.Point(111, 133);
             this.btnFileSelect.Name = "btnFileSelect";
             this.btnFileSelect.Size = new System.Drawing.Size(300, 100);
             this.btnFileSelect.TabIndex = 1;
@@ -74,7 +74,7 @@
             // btnInit
             // 
             this.btnInit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnInit.Location = new System.Drawing.Point(104, 251);
+            this.btnInit.Location = new System.Drawing.Point(111, 251);
             this.btnInit.Name = "btnInit";
             this.btnInit.Size = new System.Drawing.Size(300, 100);
             this.btnInit.TabIndex = 2;
@@ -85,7 +85,7 @@
             // btnClose
             // 
             this.btnClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnClose.Location = new System.Drawing.Point(104, 367);
+            this.btnClose.Location = new System.Drawing.Point(111, 367);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(300, 100);
             this.btnClose.TabIndex = 3;
@@ -96,7 +96,7 @@
             // groupBoxAffine
             // 
             this.groupBoxAffine.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.groupBoxAffine.Location = new System.Drawing.Point(73, 489);
+            this.groupBoxAffine.Location = new System.Drawing.Point(80, 489);
             this.groupBoxAffine.Name = "groupBoxAffine";
             this.groupBoxAffine.Size = new System.Drawing.Size(366, 725);
             this.groupBoxAffine.TabIndex = 4;
@@ -105,7 +105,7 @@
             // groupBoxTranslate
             // 
             this.groupBoxTranslate.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.groupBoxTranslate.Location = new System.Drawing.Point(104, 543);
+            this.groupBoxTranslate.Location = new System.Drawing.Point(111, 543);
             this.groupBoxTranslate.Name = "groupBoxTranslate";
             this.groupBoxTranslate.Size = new System.Drawing.Size(300, 180);
             this.groupBoxTranslate.TabIndex = 5;
@@ -114,7 +114,7 @@
             // groupBoxScale
             // 
             this.groupBoxScale.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.groupBoxScale.Location = new System.Drawing.Point(104, 736);
+            this.groupBoxScale.Location = new System.Drawing.Point(111, 736);
             this.groupBoxScale.Name = "groupBoxScale";
             this.groupBoxScale.Size = new System.Drawing.Size(300, 180);
             this.groupBoxScale.TabIndex = 6;
@@ -123,7 +123,7 @@
             // groupBoxRotate
             // 
             this.groupBoxRotate.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.groupBoxRotate.Location = new System.Drawing.Point(104, 929);
+            this.groupBoxRotate.Location = new System.Drawing.Point(111, 929);
             this.groupBoxRotate.Name = "groupBoxRotate";
             this.groupBoxRotate.Size = new System.Drawing.Size(300, 180);
             this.groupBoxRotate.TabIndex = 7;
@@ -131,7 +131,7 @@
             // 
             // textBoxTx
             // 
-            this.textBoxTx.Location = new System.Drawing.Point(166, 594);
+            this.textBoxTx.Location = new System.Drawing.Point(173, 594);
             this.textBoxTx.Name = "textBoxTx";
             this.textBoxTx.Size = new System.Drawing.Size(184, 54);
             this.textBoxTx.TabIndex = 8;
@@ -140,7 +140,7 @@
             // 
             // textBoxTy
             // 
-            this.textBoxTy.Location = new System.Drawing.Point(166, 654);
+            this.textBoxTy.Location = new System.Drawing.Point(173, 654);
             this.textBoxTy.Name = "textBoxTy";
             this.textBoxTy.Size = new System.Drawing.Size(184, 54);
             this.textBoxTy.TabIndex = 8;
@@ -149,7 +149,7 @@
             // 
             // textBoxSy
             // 
-            this.textBoxSy.Location = new System.Drawing.Point(166, 848);
+            this.textBoxSy.Location = new System.Drawing.Point(173, 848);
             this.textBoxSy.Name = "textBoxSy";
             this.textBoxSy.Size = new System.Drawing.Size(184, 54);
             this.textBoxSy.TabIndex = 8;
@@ -159,7 +159,7 @@
             // 
             // textBoxSx
             // 
-            this.textBoxSx.Location = new System.Drawing.Point(166, 788);
+            this.textBoxSx.Location = new System.Drawing.Point(173, 788);
             this.textBoxSx.Name = "textBoxSx";
             this.textBoxSx.Size = new System.Drawing.Size(184, 54);
             this.textBoxSx.TabIndex = 8;
@@ -169,7 +169,7 @@
             // 
             // textBoxRotate
             // 
-            this.textBoxRotate.Location = new System.Drawing.Point(166, 1002);
+            this.textBoxRotate.Location = new System.Drawing.Point(173, 1002);
             this.textBoxRotate.Name = "textBoxRotate";
             this.textBoxRotate.Size = new System.Drawing.Size(184, 54);
             this.textBoxRotate.TabIndex = 9;
@@ -179,7 +179,7 @@
             // btnGo
             // 
             this.btnGo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnGo.Location = new System.Drawing.Point(166, 1125);
+            this.btnGo.Location = new System.Drawing.Point(173, 1125);
             this.btnGo.Name = "btnGo";
             this.btnGo.Size = new System.Drawing.Size(184, 74);
             this.btnGo.TabIndex = 10;
@@ -198,7 +198,8 @@
             // 
             // pictureBox
             // 
-            this.pictureBox.Location = new System.Drawing.Point(543, 133);
+            this.pictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox.Location = new System.Drawing.Point(544, 133);
             this.pictureBox.Name = "pictureBox";
             this.pictureBox.Size = new System.Drawing.Size(1118, 1080);
             this.pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -217,7 +218,7 @@
             // 
             // lblTx
             // 
-            this.lblTx.Location = new System.Drawing.Point(111, 598);
+            this.lblTx.Location = new System.Drawing.Point(118, 598);
             this.lblTx.Name = "lblTx";
             this.lblTx.Size = new System.Drawing.Size(50, 50);
             this.lblTx.TabIndex = 14;
@@ -225,7 +226,7 @@
             // 
             // lblTy
             // 
-            this.lblTy.Location = new System.Drawing.Point(111, 655);
+            this.lblTy.Location = new System.Drawing.Point(118, 655);
             this.lblTy.Name = "lblTy";
             this.lblTy.Size = new System.Drawing.Size(50, 50);
             this.lblTy.TabIndex = 15;
@@ -233,7 +234,7 @@
             // 
             // lblSx
             // 
-            this.lblSx.Location = new System.Drawing.Point(110, 794);
+            this.lblSx.Location = new System.Drawing.Point(117, 794);
             this.lblSx.Name = "lblSx";
             this.lblSx.Size = new System.Drawing.Size(50, 50);
             this.lblSx.TabIndex = 16;
@@ -241,7 +242,7 @@
             // 
             // lblSy
             // 
-            this.lblSy.Location = new System.Drawing.Point(110, 850);
+            this.lblSy.Location = new System.Drawing.Point(117, 850);
             this.lblSy.Name = "lblSy";
             this.lblSy.Size = new System.Drawing.Size(50, 50);
             this.lblSy.TabIndex = 17;
