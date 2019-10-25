@@ -248,8 +248,8 @@ namespace AffineWinFormCoreCSharp
         }
         public Translate()
         {
-            m_fTx = 0F;
-            m_fTy = 0F;
+            m_fTx = 0.0F;
+            m_fTy = 0.0F;
         }
 
         ~Translate()
@@ -286,8 +286,8 @@ namespace AffineWinFormCoreCSharp
         }
         public Scale()
         {
-            m_fSx = 1F;
-            m_fSy = 1F;
+            m_fSx = 1.0F;
+            m_fSy = 1.0F;
         }
 
         ~Scale()
@@ -306,7 +306,7 @@ namespace AffineWinFormCoreCSharp
         }
         public Rotate()
         {
-            m_angle = 0F;
+            m_angle = 0.0F;
         }
 
         ~Rotate()
