@@ -134,7 +134,7 @@
             this.textBoxTx.Location = new System.Drawing.Point(173, 594);
             this.textBoxTx.Name = "textBoxTx";
             this.textBoxTx.Size = new System.Drawing.Size(184, 54);
-            this.textBoxTx.TabIndex = 8;
+            this.textBoxTx.TabIndex = 4;
             this.textBoxTx.Text = "0";
             this.textBoxTx.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -143,7 +143,7 @@
             this.textBoxTy.Location = new System.Drawing.Point(173, 654);
             this.textBoxTy.Name = "textBoxTy";
             this.textBoxTy.Size = new System.Drawing.Size(184, 54);
-            this.textBoxTy.TabIndex = 8;
+            this.textBoxTy.TabIndex = 5;
             this.textBoxTy.Text = "0";
             this.textBoxTy.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -152,7 +152,7 @@
             this.textBoxSy.Location = new System.Drawing.Point(173, 848);
             this.textBoxSy.Name = "textBoxSy";
             this.textBoxSy.Size = new System.Drawing.Size(184, 54);
-            this.textBoxSy.TabIndex = 8;
+            this.textBoxSy.TabIndex = 7;
             this.textBoxSy.Text = "1";
             this.textBoxSy.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.textBoxSy.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnKeyPressTextBoxSy);
@@ -162,7 +162,7 @@
             this.textBoxSx.Location = new System.Drawing.Point(173, 788);
             this.textBoxSx.Name = "textBoxSx";
             this.textBoxSx.Size = new System.Drawing.Size(184, 54);
-            this.textBoxSx.TabIndex = 8;
+            this.textBoxSx.TabIndex = 6;
             this.textBoxSx.Text = "1";
             this.textBoxSx.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.textBoxSx.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnKeyPressTextBoxSx);
@@ -172,7 +172,7 @@
             this.textBoxRotate.Location = new System.Drawing.Point(173, 1002);
             this.textBoxRotate.Name = "textBoxRotate";
             this.textBoxRotate.Size = new System.Drawing.Size(184, 54);
-            this.textBoxRotate.TabIndex = 9;
+            this.textBoxRotate.TabIndex = 8;
             this.textBoxRotate.Text = "0";
             this.textBoxRotate.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -182,7 +182,7 @@
             this.btnGo.Location = new System.Drawing.Point(173, 1125);
             this.btnGo.Name = "btnGo";
             this.btnGo.Size = new System.Drawing.Size(184, 74);
-            this.btnGo.TabIndex = 10;
+            this.btnGo.TabIndex = 9;
             this.btnGo.Text = "Go";
             this.btnGo.UseVisualStyleBackColor = false;
             this.btnGo.Click += new System.EventHandler(this.OnClickBtnGo);
