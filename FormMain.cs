@@ -20,11 +20,11 @@ namespace AffineWinFormCoreCSharp
         {
             InitializeComponent();
 
-            lblTitle.MouseDown += new MouseEventHandler(OnMouseDownFormMain);
-            lblTitle.MouseMove += new MouseEventHandler(OnMouseMoveFormMain);
+            lblTitle.MouseDown += new MouseEventHandler(OnMouseDownLblTitle);
+            lblTitle.MouseMove += new MouseEventHandler(OnMouseMoveLblTitle);
         }
 
-        private void OnMouseDownFormMain(object sender, MouseEventArgs e)
+        private void OnMouseDownLblTitle(object sender, MouseEventArgs e)
         {
             if ((e.Button & MouseButtons.Left) == MouseButtons.Left)
             {
@@ -32,7 +32,7 @@ namespace AffineWinFormCoreCSharp
             }
         }
 
-        private void OnMouseMoveFormMain(object sender, MouseEventArgs e)
+        private void OnMouseMoveLblTitle(object sender, MouseEventArgs e)
         {
             if ((e.Button & MouseButtons.Left) == MouseButtons.Left)
             {
