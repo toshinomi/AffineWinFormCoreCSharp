@@ -11,11 +11,17 @@ using System.Windows.Forms;
 
 namespace AffineWinFormCoreCSharp
 {
+    /// <summary>
+    /// MainFormのロジック
+    /// </summary>
     public partial class FormMain : Form
     {
         private Point m_mousePoint;
         private string m_strOpenFileName;
 
+        /// <summary>
+        /// コンストラクタ
+        /// </summary>
         public FormMain()
         {
             InitializeComponent();
@@ -24,6 +30,11 @@ namespace AffineWinFormCoreCSharp
             lblTitle.MouseMove += new MouseEventHandler(OnMouseMoveLblTitle);
         }
 
+        /// <summary>
+        /// タイトルバーマウスダウンのクリックイベント
+        /// </summary>
+        /// <param name="sender">オブジェクト</param>
+        /// <param name="e">イベントのデータ</param>
         private void OnMouseDownLblTitle(object sender, MouseEventArgs e)
         {
             if ((e.Button & MouseButtons.Left) == MouseButtons.Left)
@@ -32,6 +43,11 @@ namespace AffineWinFormCoreCSharp
             }
         }
 
+        /// <summary>
+        /// タイトルバーマウスムーブのクリックイベント
+        /// </summary>
+        /// <param name="sender">オブジェクト</param>
+        /// <param name="e">イベントのデータ</param>
         private void OnMouseMoveLblTitle(object sender, MouseEventArgs e)
         {
             if ((e.Button & MouseButtons.Left) == MouseButtons.Left)
@@ -41,6 +57,11 @@ namespace AffineWinFormCoreCSharp
             }
         }
 
+        /// <summary>
+        /// ファイル選択ボタンのクリックイベント
+        /// </summary>
+        /// <param name="sender">オブジェクト</param>
+        /// <param name="e">イベントのデータ</param>
         private void OnClickBtnFileSelect(object sender, EventArgs e)
         {
             ComOpenFileDialog openFileDlg = new ComOpenFileDialog();
@@ -56,6 +77,11 @@ namespace AffineWinFormCoreCSharp
             return;
         }
 
+        /// <summary>
+        /// 閉じるボタンのクリックイベント
+        /// </summary>
+        /// <param name="sender">オブジェクト</param>
+        /// <param name="e">イベントのデータ</param>
         private void OnClickBtnClose(object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show("Close the application ?", "Question", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button2);
@@ -65,6 +91,11 @@ namespace AffineWinFormCoreCSharp
             }
         }
 
+        /// <summary>
+        /// 初期化ボタンのクリックイベント
+        /// </summary>
+        /// <param name="sender">オブジェクト</param>
+        /// <param name="e">イベントのデータ</param>
         private void OnClickBtnInit(object sender, EventArgs e)
         {
             if (!string.IsNullOrWhiteSpace(m_strOpenFileName))
@@ -73,6 +104,11 @@ namespace AffineWinFormCoreCSharp
             }
         }
 
+        /// <summary>
+        /// アフィン変換実行ボタンのクリックイベント
+        /// </summary>
+        /// <param name="sender">オブジェクト</param>
+        /// <param name="e">イベントのデータ</param>
         private void OnClickBtnGo(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(m_strOpenFileName))
@@ -107,6 +143,11 @@ namespace AffineWinFormCoreCSharp
             pictureBox.Image = Affine(affineInfo);
         }
 
+        /// <summary>
+        /// 文字列の空のチェック
+        /// </summary>
+        /// <param name="_str">画像処理の名称</param>
+        /// <returns>文字列の空のチェックの結果 文字列なし/文字列あり</returns>
         public bool IsEmpty(string _str)
         {
             bool bIsEmpty = false;
@@ -118,6 +159,11 @@ namespace AffineWinFormCoreCSharp
             return bIsEmpty;
         }
 
+        /// <summary>
+        /// アフィン変換
+        /// </summary>
+        /// <param name="_affineInfo">アフィン変換情報</param>
+        /// <returns>アフィン変換のイメージ</returns>
         public Image Affine(AffineInfo _affineInfo)
         {
             float fTx = _affineInfo.Translate.Tx;
@@ -143,6 +189,11 @@ namespace AffineWinFormCoreCSharp
             return bitmap;
         }
 
+        /// <summary>
+        /// スケールXのテキストボックスのキー入力イベント
+        /// </summary>
+        /// <param name="sender">オブジェクト</param>
+        /// <param name="e">キー入力イベントのデータ</param>
         private void OnKeyPressTextBoxSx(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == '.')
@@ -167,6 +218,11 @@ namespace AffineWinFormCoreCSharp
             return;
         }
 
+        /// <summary>
+        /// スケールYのテキストボックスのキー入力イベント
+        /// </summary>
+        /// <param name="sender">オブジェクト</param>
+        /// <param name="e">キー入力イベントのデータ</param>
         private void OnKeyPressTextBoxSy(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == '.')
@@ -191,34 +247,57 @@ namespace AffineWinFormCoreCSharp
             return;
         }
 
+        /// <summary>
+        /// 文字列から指定の文字をカウントする
+        /// </summary>
+        /// <param name="_str">文字列</param>
+        /// <param name="_strChar">カウントする文字</param>
+        /// <returns>カウント数</returns>
         public int CountChar(string _str, string _strChar)
         {
             return _str.Length - _str.Replace(_strChar, "").Length;
         }
     }
 
+    /// <summary>
+    /// アフィン変換情報
+    /// </summary>
     public class AffineInfo
     {
         private Translate m_translate;
         private Scale m_scale;
         private Rotate m_rotate;
 
+        /// <summary>
+        /// 移動情報
+        /// </summary>
         public Translate Translate
         {
             set {m_translate = value; }
             get { return m_translate; }
         }
+
+        /// <summary>
+        /// 拡大・縮小情報
+        /// </summary>
         public Scale Scale
         {
             set { m_scale = value; }
             get { return m_scale; }
         }
+
+        /// <summary>
+        /// 回転情報
+        /// </summary>
         public Rotate Rotate
         {
             set { m_rotate = value; }
             get { return m_rotate; }
         }
 
+        /// <summary>
+        /// コンストラクタ
+        /// </summary>
         public AffineInfo()
         {
             m_translate = new Translate();
@@ -226,42 +305,68 @@ namespace AffineWinFormCoreCSharp
             m_rotate = new Rotate();
         }
 
+        /// <summary>
+        /// デスクトラクタ
+        /// </summary>
         ~AffineInfo()
         {
         }
     }
 
+    /// <summary>
+    /// 移動情報
+    /// </summary>
     public class Translate
     {
         private float m_fTx;
         private float m_fTy;
 
+        /// <summary>
+        /// X方向の移動
+        /// </summary>
         public float Tx
         {
             set { m_fTx = value; }
             get { return m_fTx; }
         }
+
+        /// <summary>
+        /// Y方向の移動
+        /// </summary>
         public float Ty
         {
             set { m_fTy = value; }
             get { return m_fTy; }
         }
+
+        /// <summary>
+        /// コンストラクタ
+        /// </summary>
         public Translate()
         {
             m_fTx = 0.0F;
             m_fTy = 0.0F;
         }
 
+        /// <summary>
+        /// デスクトラクタ
+        /// </summary>
         ~Translate()
         {
         }
     }
 
+    /// <summary>
+    /// 拡大・縮小情報
+    /// </summary>
     public class Scale
     {
         private float m_fSx;
         private float m_fSy;
 
+        /// <summary>
+        /// X方向の拡大・縮小
+        /// </summary>
         public float Sx
         {
             set
@@ -273,6 +378,10 @@ namespace AffineWinFormCoreCSharp
             }
             get { return m_fSx; }
         }
+
+        /// <summary>
+        /// Y方向の拡大・縮小
+        /// </summary>
         public float Sy
         {
             set
@@ -284,31 +393,51 @@ namespace AffineWinFormCoreCSharp
             }
             get { return m_fSy; }
         }
+
+        /// <summary>
+        /// コンストラクタ
+        /// </summary>
         public Scale()
         {
             m_fSx = 1.0F;
             m_fSy = 1.0F;
         }
 
+        /// <summary>
+        /// デスクトラクタ
+        /// </summary>
         ~Scale()
         {
         }
     }
 
+    /// <summary>
+    /// 回転情報
+    /// </summary>
     public class Rotate
     {
         private float m_angle;
 
+        /// <summary>
+        /// 回転
+        /// </summary>
         public float Angle
         {
             set { m_angle = value; }
             get { return m_angle; }
         }
+
+        /// <summary>
+        /// コンストラクタ
+        /// </summary>
         public Rotate()
         {
             m_angle = 0.0F;
         }
 
+        /// <summary>
+        /// デスクトラクタ
+        /// </summary>
         ~Rotate()
         {
         }
